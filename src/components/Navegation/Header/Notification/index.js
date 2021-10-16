@@ -11,9 +11,9 @@ const Notification = () => {
             <Menu.Button className="rounded-full border relative">
                 <div className="absolute right-0 p-1 bg-red-400 rounded-full animate-ping z-50"></div>
                 <div className="absolute right-0 p-1 bg-red-400 border rounded-full z-50"></div>
-                <button className="p-2 bg-white border rounded-full hover:bg-gray-50" >
+                <div className="p-2 bg-white border rounded-full hover:bg-gray-50" >
                     <IoMdNotifications className="w-6 h-6 text-gray-500" />
-                </button>
+                </div>
             </Menu.Button>
 
             <Transition
@@ -25,7 +25,7 @@ const Notification = () => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="max-w-md min-w-max z-50 origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 bg-white text-blueGray-600">
+                <Menu.Items className="max-w-xs lg:max-w-md lg:min-w-max z-50 origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 bg-white text-blueGray-600">
                     <div className="p-4 font-medium border-b flex justify-between items-center">
 
                         <span className="text-gray-800 text-xl font-bold">Notificaciones</span>
@@ -65,37 +65,21 @@ const Notifications = () => {
 
 const MenuNotification = () => {
     return (
-        <>
-            <Menu as="Menu.Button">
-                {/* Menu Notifications */}
-                <Menu.Button>
-                    <button>
-                        <BsThreeDots className='text-black text-xl' />
-                    </button>
-                </Menu.Button>
-                <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                >
-                    {/* Options Menu notificacion */}
-                    <Menu.Items className="max-w-md min-w-max z-50 origin-top-right absolute right-0 mt-2 rounded-md shadow-lg bg-white text-blueGray-600">
-                        <Menu.Item>
-                            <div className='w-96'>
-                                <OptionsMenuNotification value='Ver notificaciones'>
-                                    <BiFoodMenu className='mr-2' />
-                                </OptionsMenuNotification>
-                            </div>
-                        </Menu.Item>
+        <Menu>
+            <Menu.Button><BsThreeDots className='text-black text-xl' /></Menu.Button>
+            <Menu.Items className="max-w-xs lg:max-w-md lg:min-w-max z-50 origin-top-right absolute top-12 right-0 mt-2 rounded-md shadow-lg bg-white text-blueGray-600">
+                <Menu.Item>
+                    {({ active }) => (
+                        <div className='w-96'>
+                            <OptionsMenuNotification value='Ver notificaciones'>
+                                <BiFoodMenu className='mr-2' />
+                            </OptionsMenuNotification>
+                        </div>
+                    )}
+                </Menu.Item>
 
-                    </Menu.Items>
-                </Transition>
-            </Menu>
-        </>
+            </Menu.Items>
+        </Menu>
     );
 }
 

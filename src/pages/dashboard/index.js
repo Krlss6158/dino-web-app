@@ -3,9 +3,9 @@ import Container from 'components/Navegation/container';
 const Dashboard = () => {
     return (
         <>
-            <Container />
-            <br/>
-            Dashboard
+            <Container>
+                Dashboard
+            </Container>
         </>
     );
 }
