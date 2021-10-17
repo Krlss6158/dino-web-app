@@ -1,5 +1,5 @@
 import Container from "components/Navegation/container";
-import CreateUser from "components/settings/users";
+import CreateUser from "components/settings/users/create";
 
 const Create = () => {
     return (

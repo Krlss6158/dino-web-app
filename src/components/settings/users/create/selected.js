@@ -7,9 +7,9 @@ const Selected = () => {
             >
                 Rol
             </label>
-            <select class="block w-full h-11 bg-white hover:border-gray-500 px-2 rounded shadow focus:outline-none focus:shadow-outline text-sm">
-                <option>Guest</option>
-                <option>Administrador</option>
+            <select className="block w-full h-11 bg-white hover:border-gray-500 px-2 rounded shadow focus:outline-none focus:shadow-outline text-sm">
+                <option value='Guest'>Guest</option>
+                <option value='Administrador'>Administrador</option>
             </select>
         </div>
     );

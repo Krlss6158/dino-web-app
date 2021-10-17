@@ -1,4 +1,4 @@
-const CreateHeader = ({
+const Header = ({
     valueH6 = 'Inserte el título aquí',
     valueButton = 'Texto del botón'
 }) => {
@@ -16,4 +16,4 @@ const CreateHeader = ({
     );
 }
 
-export default CreateHeader;
+export default Header;

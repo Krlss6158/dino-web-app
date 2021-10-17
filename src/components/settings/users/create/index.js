@@ -1,7 +1,7 @@
-import CreateHeader from "./Create.header";
-import Section from './Create.section';
-import Input from './Create.input';
-import Selected from "./Create.selected";
+import Header from "./header";
+import Section from './section';
+import Input from './input';
+import Selected from "./selected";
 
 export default function CreateUser() {
     return (
@@ -10,7 +10,7 @@ export default function CreateUser() {
                 
 
                 <div className="rounded-t bg-white mb-0 px-6 py-6">
-                    <CreateHeader valueH6='Crear usuario' valueButton='Crear' />
+                    <Header valueH6='Crear usuario' valueButton='Crear' />
                 </div>
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-5">
                     <form autoComplete='off'>
