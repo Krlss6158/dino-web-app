@@ -1,43 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
 import App from "next/app";
 import Head from "next/head";
-import Router from "next/router";
 
-import PageChange from "components/PageChange";
-
-import 'styles/globals.css'
+import 'styles/globals.css';
 import 'styles/tailwindNew.css';
-
-Router.events.on("routeChangeStart", (url) => {
-  console.log(`Loading: ${url}`);
-  document.body.classList.add("body-page-transition");
-  ReactDOM.render(
-    <PageChange path={url} />,
-    document.getElementById("page-transition")
-  );
-});
-Router.events.on("routeChangeComplete", () => {
-  ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-  document.body.classList.remove("body-page-transition");
-});
-Router.events.on("routeChangeError", () => {
-  ReactDOM.unmountComponentAtNode(document.getElementById("page-transition"));
-  document.body.classList.remove("body-page-transition");
-});
 
 export default class MyApp extends App {
 
-  static async getInitialProps({ Component, router, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
-  }
   render() {
+
     const { Component, pageProps } = this.props;
 
     const Layout = Component.layout || (({ children }) => <>{children}</>);
@@ -49,7 +20,7 @@ export default class MyApp extends App {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <title>Dino web App</title>
+          <title>Dino Web App</title>
         </Head>
         <Layout>
           <Component {...pageProps} />

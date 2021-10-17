@@ -4,7 +4,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import { AiOutlineHome } from 'react-icons/ai';
 
-const Container = ({ children }) => {
+const Container = ({ children, NamePage }) => {
     const router = useRouter()
     const [openSidebar, setOpenSidebar] = useState(false);
     const isOpenSidebar = () => { setOpenSidebar(!openSidebar) }
@@ -19,24 +19,26 @@ const Container = ({ children }) => {
                 }
 
                 {/* Sidebar */}
-                <Sidebar isOpen={openSidebar} onClick={isOpenSidebar} />
+                <Sidebar isOpen={openSidebar} />
 
                 <div className="flex flex-col flex-1 h-full overflow-hidden">
 
                     <Header onClick={isOpenSidebar} />
 
-                    <main className="flex-1 max-h-full p-5 overflow-hidden overflow-y-scroll">
-                        <div className="flex flex-col items-start justify-between pb-6 space-y-4 border-b lg:items-center lg:space-y-0 lg:flex-row">
+                    <main className="flex-1 max-h-full p-5 overflow-x-hidden overflow-y-auto bg-blueGray-100">
+                        <div className="flex flex-col items-start justify-between pb-6 space-y-4 border-b border-gray-300 lg:items-center lg:space-y-0 lg:flex-row">
 
-                            <h1 className="text-2xl font-semibold whitespace-nowrap">Dashboard</h1>
+                            <h1 className="text-2xl font-semibold whitespace-nowrap">{NamePage}</h1>
 
                             <div className="space-y-6 md:space-x-2 md:space-y-0 flex justify-center items-center">
-                                <a className='mr-1 text-lg' href='/dashboard'><AiOutlineHome/></a>
-                                {router.pathname.replace('/', '/ ')}
+                                <a className='mr-1 text-lg' href='/dashboard'><AiOutlineHome /></a>
+                                {router.pathname.replaceAll('/', ' / ')}
                             </div>
                         </div>
 
-                        {children}
+                        <div className='w-full min-h-full rounded-lg p-4 mt-2 bg-gray-50 border shadow-lg'>
+                            {children}
+                        </div>
 
                     </main >
 

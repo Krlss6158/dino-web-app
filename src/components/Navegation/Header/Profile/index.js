@@ -4,15 +4,17 @@ import { AiOutlineLogout, AiOutlineUser } from 'react-icons/ai';
 
 const Profile = () => {
     return (
-        <Menu as="Menu.Button" className="ml-3 relative">
+        <Menu as="div" className="ml-3 relative">
 
-            <Menu.Button className="rounded-full border relative">
-                <img
-                    className="object-cover w-8 h-8 rounded-full"
-                    src="https://picsum.photos/200"
-                    alt="Random"
-                />
-            </Menu.Button>
+            <div>
+                <Menu.Button className="rounded-full border relative">
+                    <img
+                        className="object-cover w-8 h-8 rounded-full"
+                        src="https://picsum.photos/200"
+                        alt="Random"
+                    />
+                </Menu.Button>
+            </div>
 
             <Transition
                 as={Fragment}

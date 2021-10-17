@@ -12,7 +12,7 @@ const PageChange = (props) =>{
           <div className="block mb-4">
             <i className="fas fa-circle-notch animate-spin text-white mx-auto text-6xl"></i>
           </div>
-          <h4 className="text-lg font-medium text-white">
+          <h4 className="text-lg font-medium text-black">
             Loading page contents for: {props.path}
           </h4>
         </div>

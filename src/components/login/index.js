@@ -7,7 +7,6 @@ export const Label = (props) => {
 }
 
 export const Input = (props) => {
-    console.log(props)
     return (
         <input
             type={props.type}
