@@ -8,7 +8,7 @@ const Sidebar = ({
 }) => {
 
     return (
-        <aside className={isOpen ? `w-64 ${classname} ` : `transition-all duration-500 w-0 overflow-hidden`}>
+        <aside className={isOpen ? `w-64 ${classname} ` : `transition-all duration-500 -ml-70 overflow-hidden`}>
 
             <Header/>
             <Navegation />
