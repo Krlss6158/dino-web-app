@@ -73,8 +73,8 @@ const Table = ({
 
                             <tbody className="bg-white divide-y divide-gray-200">
 
-                                {commentsData.map(comment => (
-                                    <tr>
+                                {commentsData.map((comment, key) => (
+                                    <tr key={key}>
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center">
                                                 <div className="flex-shrink-0 h-10 w-10">
@@ -104,7 +104,7 @@ const Table = ({
                                         </td>
                                     </tr>
                                 ))}
-                            
+
                             </tbody>
                         </table>
                     </div>
