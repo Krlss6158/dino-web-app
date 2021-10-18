@@ -32,7 +32,7 @@ const Container = ({ children, NamePage }) => {
 
                             <div className="space-y-6 md:space-x-2 md:space-y-0 flex justify-center items-center">
                                 <a className='mr-1 text-lg' href='/dashboard'><AiOutlineHome /></a>
-                                {router.pathname.replaceAll('/', ' / ')}
+                                {/* {router.pathname.replaceAll('/', ' / ')} */}
                             </div>
                         </div>
 
