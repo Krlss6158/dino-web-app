@@ -77,7 +77,7 @@ CardStats.propTypes = {
   // from tailwindcss
   statPercentColor: PropTypes.string,
   statDescripiron: PropTypes.string,
-  statIconName: PropTypes.string,
+  statIconName: PropTypes.object,
   // can be any of the background color utilities
   // from tailwindcss
   statIconColor: PropTypes.string,

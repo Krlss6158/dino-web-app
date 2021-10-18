@@ -4,6 +4,7 @@ import Head from "next/head";
 
 import 'styles/globals.css';
 import 'styles/tailwindNew.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default class MyApp extends App {
 

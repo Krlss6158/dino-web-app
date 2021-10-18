@@ -1,6 +1,6 @@
 
 const defaultClass = 'w-full px-4';
-const defaultClassInput = 'border-0 px-3 py-3 bg-white rounded text-sm shadow focus:outline-none focus:ring-1 focus:ring-gray-500 w-full resize-none';
+const defaultClassInput = 'border px-3 py-3 bg-white rounded text-sm shadow focus:outline-none focus:ring-1 focus:ring-gray-500 w-full resize-none';
 
 export function Input({
     dimension = '12',
@@ -8,7 +8,10 @@ export function Input({
     placeholder = 'Placehoder',
     type = 'text',
     textArea = false,
-    defaultValue
+    value,
+    onChange,
+    required,
+    pattern
 }) {
     return (
         !textArea &&
@@ -29,9 +32,12 @@ export function Input({
                     type={type}
                     name={name}
                     id={name}
-                    defaultValue={defaultValue && defaultValue}
+                    required={required && required}
                     className={`${defaultClassInput}`}
                     placeholder={placeholder}
+                    value={value}
+                    onChange={onChange}
+                    pattern={pattern && pattern}
                 />
             </div>
         </div>
@@ -47,7 +53,14 @@ export function Input({
                 <label className="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
                     {placeholder}
                 </label>
-                <textarea name={name} id={name} className={`${defaultClassInput}`} rows="4" placeholder={placeholder}
+                <textarea
+                    name={name}
+                    id={name}
+                    className={`${defaultClassInput}`}
+                    rows="4"
+                    placeholder={placeholder}
+                    value={value}
+                    onChange={onChange}
                 ></textarea>
             </div>
         </div>
