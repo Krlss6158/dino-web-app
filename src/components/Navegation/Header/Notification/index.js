@@ -54,7 +54,7 @@ const Notification = () => {
 const Notifications = () => {
     return (
         <a href="#" className="p-2 hover:bg-gray-100 flex justify-start items-center space-x-2 relative">
-            <img src='https://picsum.photos/200' className='w-16 h-16 rounded-full' />
+            <img src='https://picsum.photos/200' alt='' className='w-16 h-16 rounded-full' />
             <div className='break-words w-60 text-blueGray-600'>
                 <div className='font-semibold'>Carlos Alfredo Pico Catagua</div>
                 <span>Ha hecho un reporte</span>
